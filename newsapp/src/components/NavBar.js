@@ -2,10 +2,26 @@ import React, { Component } from 'react'
 
 export class NavBar extends Component {
 
+  constructor()
+  {
+    super();
+    this.state={
+      style:{backgroundColor:'white'}
+    }
+  }
+
+  handleChange=()=>{
+    console.log('handle change clicked')
+    this.setState({
+      style:{backgroundColor:'dark'}
+    })
+  }
+
     render() {
+     
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav className={`navbar navbar-expand-lg navbar-light bg-${this.state.style.backgroundColor}`}>
   <div className="container-fluid">
     <a className="navbar-brand" href="/">NewsMonk</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +37,10 @@ export class NavBar extends Component {
         </li>
       </ul>
     </div>
+    <div className="form-check form-switch">
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"  onChange={this.handleChange}/>
+  <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Enable Mode</label>
+</div>
   </div>
 </nav>
             </div>
