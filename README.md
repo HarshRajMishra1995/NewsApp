@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to News App
 
 You can use the [editor on GitHub](https://github.com/HarshRajMishra1995/NewsApp/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
